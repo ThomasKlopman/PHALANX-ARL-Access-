@@ -1,0 +1,173 @@
+[
+  {
+    "stage": "F1",
+    "what": "raw I/Q",
+    "obtained": "1,638,400 samples, complex64, 8 MS/s",
+    "expected": "1,638,400 samples",
+    "ok": true
+  },
+  {
+    "stage": "F1",
+    "what": "level (the leakage dominates)",
+    "obtained": "-24.0 dBFS",
+    "expected": "-24.0 dBFS",
+    "ok": "True"
+  },
+  {
+    "stage": "F2",
+    "what": "TX->RX latency",
+    "obtained": "83 samples (10.38 us), peak 50 dB",
+    "expected": "83 samples",
+    "ok": true
+  },
+  {
+    "stage": "F3",
+    "what": "leakage lands at DC: level",
+    "obtained": "-24.0 dBFS",
+    "expected": "-24.0 dBFS",
+    "ok": "True"
+  },
+  {
+    "stage": "F3",
+    "what": "target's beat frequency",
+    "obtained": "781 Hz",
+    "expected": "801 Hz ((B/T) x 2R/c)",
+    "ok": true
+  },
+  {
+    "stage": "F4",
+    "what": "after low-pass and decimation",
+    "obtained": "4096 samples, complex64, 20 kS/s (1/400)",
+    "expected": "4096 samples",
+    "ok": true
+  },
+  {
+    "stage": "1",
+    "what": "DC removed: |mean| after",
+    "obtained": "5.2e-10",
+    "expected": "< 1e-6",
+    "ok": "True"
+  },
+  {
+    "stage": "3",
+    "what": "sweep matrix (sweeps x samples)",
+    "obtained": [
+      25,
+      80
+    ],
+    "expected": [
+      25,
+      80
+    ],
+    "ok": true
+  },
+  {
+    "stage": "4",
+    "what": "range profiles (sweeps x cells)",
+    "obtained": [
+      25,
+      41
+    ],
+    "expected": [
+      25,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "4",
+    "what": "strongest cell beyond cell 0",
+    "obtained": "cell 3 (75 m)",
+    "expected": "cell 3 (80 m / 25.0 m)",
+    "ok": true
+  },
+  {
+    "stage": "5",
+    "what": "after MTI (sweeps x cells)",
+    "obtained": [
+      24,
+      41
+    ],
+    "expected": [
+      24,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "5",
+    "what": "MTI gain at the target's cell",
+    "obtained": "+0.7 dB",
+    "expected": "+0.7 dB (2|sin(pi f_d PRI)|)",
+    "ok": "True"
+  },
+  {
+    "stage": "5",
+    "what": "cell 0 level, before -> after MTI",
+    "obtained": "-68.7 -> -78.8 dB",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "6",
+    "what": "range-Doppler map (speeds x cells)",
+    "obtained": [
+      24,
+      41
+    ],
+    "expected": [
+      24,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "6",
+    "what": "speed of the peak in that cell",
+    "obtained": "+1.27 m/s",
+    "expected": "+1.40 m/s (cell 0.31 m/s)",
+    "ok": "True"
+  },
+  {
+    "stage": "7",
+    "what": "power map: median (noise floor)",
+    "obtained": "-72.7 dB",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "8",
+    "what": "CA-CFAR threshold factor",
+    "obtained": "9.8 dB over the local mean",
+    "expected": "Pfa 0.0001",
+    "ok": null
+  },
+  {
+    "stage": "8",
+    "what": "cells over threshold (before gates)",
+    "obtained": 7,
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "9",
+    "what": "gates",
+    "obtained": "range 37 to 300 m, |speed| >= 0.3 m/s",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "9",
+    "what": "detections: 1; strongest",
+    "obtained": "79 m, +1.40 m/s, 27 dB",
+    "expected": "80 m, +1.40 m/s",
+    "ok": true
+  },
+  {
+    "stage": "=",
+    "what": "stage-by-stage equals the pipeline",
+    "obtained": "identical",
+    "expected": "identical",
+    "ok": true
+  }
+]

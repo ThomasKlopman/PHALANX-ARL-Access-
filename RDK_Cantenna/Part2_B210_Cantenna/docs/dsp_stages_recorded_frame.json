@@ -1,0 +1,145 @@
+[
+  {
+    "stage": "F2",
+    "what": "latency stored with the frame",
+    "obtained": "83 samples",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "F3",
+    "what": "leakage (DC of the beat)",
+    "obtained": "-26.2 dBFS",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "F4",
+    "what": "beat frame",
+    "obtained": "4096 samples, float32, 20 kS/s",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "1",
+    "what": "DC removed: |mean| after",
+    "obtained": "9.6e-10",
+    "expected": "< 1e-6",
+    "ok": "True"
+  },
+  {
+    "stage": "3",
+    "what": "sweep matrix (sweeps x samples)",
+    "obtained": [
+      25,
+      80
+    ],
+    "expected": [
+      25,
+      80
+    ],
+    "ok": true
+  },
+  {
+    "stage": "4",
+    "what": "range profiles (sweeps x cells)",
+    "obtained": [
+      25,
+      41
+    ],
+    "expected": [
+      25,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "4",
+    "what": "strongest cell beyond cell 0",
+    "obtained": "cell 1 (25 m)",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "5",
+    "what": "after MTI (sweeps x cells)",
+    "obtained": [
+      24,
+      41
+    ],
+    "expected": [
+      24,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "5",
+    "what": "cell 0 level, before -> after MTI",
+    "obtained": "-13.1 -> -34.2 dB",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "6",
+    "what": "range-Doppler map (speeds x cells)",
+    "obtained": [
+      24,
+      41
+    ],
+    "expected": [
+      24,
+      41
+    ],
+    "ok": true
+  },
+  {
+    "stage": "6",
+    "what": "speed of the peak in that cell",
+    "obtained": "-2.55 m/s",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "7",
+    "what": "power map: median (noise floor)",
+    "obtained": "-53.8 dB",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "8",
+    "what": "CA-CFAR threshold factor",
+    "obtained": "9.8 dB over the local mean",
+    "expected": "Pfa 0.0001",
+    "ok": null
+  },
+  {
+    "stage": "8",
+    "what": "cells over threshold (before gates)",
+    "obtained": 0,
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "9",
+    "what": "gates",
+    "obtained": "range 37 to 300 m, |speed| >= 0.3 m/s",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "9",
+    "what": "detections",
+    "obtained": "none",
+    "expected": null,
+    "ok": null
+  },
+  {
+    "stage": "=",
+    "what": "stage-by-stage equals the pipeline",
+    "obtained": "identical",
+    "expected": "identical",
+    "ok": true
+  }
+]
