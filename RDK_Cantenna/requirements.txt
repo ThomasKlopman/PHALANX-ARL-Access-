@@ -1,0 +1,11 @@
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+pyvisa>=1.14
+PyQt6>=6.6
+pyqtgraph>=0.13
+pytest>=8
+# VISA backend: NI-VISA is installed on the team laptop (kit works). Alternative:
+#   pip install pyvisa-py pyusb   (+ Zadig WinUSB driver)
+# USRP B210 (RF-01): UHD with the Python API (Ettus Windows installer) — see Part2_B210_Cantenna/docs/rf01_b210_cantenna_interface.md
+#   (Python 3.13.14 + UHD 4.11.0.0 confirmed working on 22 Oct 2026)

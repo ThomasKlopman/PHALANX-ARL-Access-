@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+# Recordings are data, not code. New recordings go to PHALANX_data (phalanx/paths.py),
+# outside the clone and OneDrive. These lines keep any old in-repo ones out of git.
+*.npz
+captures/
+*.session/
